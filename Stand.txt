@@ -1,7 +1,7 @@
 local Owner = getgenv().Owner
 
 getgenv().ScriptSettings = {
-    MainAccount = '"' .. getgenv().Owner .. '"',  -- Main account username
+    MainAccount = getgenv().Owner,  -- Main account username
     Configs = {
         Prefix = "",  ---REMEMBER THIS PREFIX
         Mask = "", 
