@@ -1,6 +1,3 @@
-if getgenv().Mango ~= "Best Stand Script: https://discord.gg/AfMTNBxUp3" then
-    game.Players.LocalPlayer:Kick("Get Mango Stand from https://discord.gg/AfMTNBxUp3")
-end
 getgenv().ScriptCommands = {
     ["Fix Script"] = "fix", 
     ["Reset Stand"] = "reset", 
