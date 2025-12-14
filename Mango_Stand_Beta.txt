@@ -1,0 +1,2 @@
+GetGenv().Owner = "" -- your user
+
