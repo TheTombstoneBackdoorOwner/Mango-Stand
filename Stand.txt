@@ -1,4 +1,4 @@
-local Owner = GetGenv().Owner
+local Owner = getgenv().Owner
 
 getgenv().ScriptSettings = {
     MainAccount = '"' .. getgenv().Owner .. '"',  -- Main account username
