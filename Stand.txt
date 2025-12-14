@@ -2,13 +2,14 @@ getgenv().ScriptSettings = {
     MainAccount = "",  -- Main account username
     Configs = {
         Prefix = "",  ---REMEMBER THIS PREFIX
-        Mask = "skull", 
-        Gun = "aug", "rifle", 
+        Mask = "", 
+        Gun = "lmg", 
         Melee = "stop",
-        FPSCap = 100,
+        FPSCap = 0,
         CameraOnMain = true,  -- having this true makes buying more effecient
     },
 }
+
 getgenv().ScriptCommands = {
     ["Fix Script"] = "fix", 
     ["Reset Stand"] = "reset", 
@@ -26,12 +27,12 @@ getgenv().ScriptCommands = {
     ["Loop Knock Player"] = "lknock", 
     ["Bring Player"] = "bring", 
     ["Drop Player"] = "drop", 
-    ["Gun Bring Player"] = "gbring", 
-    ["Loop Gun Knock Player"] = "lgknock", 
-    ["Loop Gun Kill Player"] = "lgkill", 
-    ["Gun Knock Player"] = "gknock", 
-    ["Gun Kill Player"] = "gkill", 
-    ["Bend Player"] = "bend",
+    ["Gun Bring Player"] = "b", 
+    ["Loop Gun Knock Player"] = "lk", 
+    ["Loop Gun Kill Player"] = "l", 
+    ["Gun Knock Player"] = "d", 
+    ["Gun Kill Player"] = "s", 
+    ["Bend Player"] = "benx",
     ["Blow Player"] = "blow",
     ["Void Player"] = "void", 
     ["Gun Void Player"] = "gvoid", 
@@ -55,7 +56,7 @@ getgenv().ScriptCommands = {
     ["Auto Heal"] = "aheal",
     ["Auto Armor"] = "aarmor",
     ["Auto Drop Cash"] = "adrop",
-    ["Kill Aura"] = "aura",
+    ["Kill Aura"] = "a",
     ["Team"] = "team",
     ["UnteamAll"] = "unteamall",
     ["ToggleMask"] = "amask",
@@ -66,5 +67,4 @@ getgenv().ScriptCommands = {
     ["Clear Multi Kill"] = "ckill",
     ["Loop Gun Multi Player"] = "slgkill",
 }
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/loader.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/yuvic123/Skidov1.2-stand/refs/heads/main/Skidov1.3-Stand"))()
