@@ -1,12 +1,13 @@
 getgenv().ScriptSettings = {
-    MainAccount = "XxLeviLegendxX26",  -- Main account username
+    MainAccount = "",  -- Main account username
     Configs = {
-        Prefix = ".",  ---REMEMBER THIS PREFIX
-        Mask = "ninja", 
-        Gun = "ak47", 
+        Prefix = "",  ---REMEMBER THIS PREFIX
+        Mask = "skull", 
+        Gun = "aug", "rifle", 
         Melee = "stop",
-        FPSCap = 0,
+        FPSCap = 100,
         CameraOnMain = true,  -- having this true makes buying more effecient
     },
 }
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/Stand.txt", true))()
