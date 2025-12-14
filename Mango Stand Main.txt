@@ -1,0 +1,12 @@
+getgenv().ScriptSettings = {
+    MainAccount = "XxLeviLegendxX26",  -- Main account username
+    Configs = {
+        Prefix = ".",  ---REMEMBER THIS PREFIX
+        Mask = "ninja", 
+        Gun = "ak47", 
+        Melee = "stop",
+        FPSCap = 0,
+        CameraOnMain = true,  -- having this true makes buying more effecient
+    },
+}
+
