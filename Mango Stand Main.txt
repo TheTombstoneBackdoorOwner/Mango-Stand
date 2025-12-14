@@ -1,3 +1,4 @@
+getgenv().Mango = "Best Stand Script: https://discord.gg/AfMTNBxUp3"
 getgenv().ScriptSettings = {
     MainAccount = "",  -- Main account username
     Configs = {
