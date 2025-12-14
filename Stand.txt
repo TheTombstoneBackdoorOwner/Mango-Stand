@@ -1,3 +1,15 @@
+getgenv().ScriptSettings = {
+    MainAccount = "",  -- Main account username
+    Configs = {
+        Prefix = "",  ---REMEMBER THIS PREFIX
+        Mask = "skull", 
+        Gun = "aug", "rifle", 
+        Melee = "stop",
+        FPSCap = 100,
+        CameraOnMain = true,  -- having this true makes buying more effecient
+    },
+}
+
 getgenv().ScriptCommands = {
     ["Fix Script"] = "fix", 
     ["Reset Stand"] = "reset", 
