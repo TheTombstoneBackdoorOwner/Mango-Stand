@@ -55,4 +55,5 @@ getgenv().ScriptCommands = {
     ["Clear Multi Kill"] = "ckill",
     ["Loop Gun Multi Player"] = "slgkill",
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/yuvic123/Skidov1.2-stand/refs/heads/main/Skidov1.3-Stand"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/Mango%20Stand.txt", true))()
