@@ -28,7 +28,7 @@ local trashtalkmsgs = {
 }
 
 local function hookOwner(plr)
-    if plr.Name ~= Account then return end
+    if plr.Name ~= getgenv().Owner then return end
     plr.Chatted:Connect(function(msg)
         msg = msg:lower()
         if msg == ".tton" then
