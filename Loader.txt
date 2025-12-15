@@ -1,0 +1,13 @@
+local Account = getgenv().Cooldude
+
+getgenv().Owner = '"' .. Account .. '"'
+getgenv().Gun = "AUG"
+getgenv().DisableRendering = false 
+getgenv().autoArmorEnabled = true
+getgenv().floss = true
+getgenv().AntiStompOn = true
+getgenv().FakePos = false
+getgenv().AutoMaskOn = true
+getgenv().shitalk = true
+getgenv().AntiMod = true
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5372ba46927baa16dfaeb850e3c6bd28.lua"))()
