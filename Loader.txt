@@ -73,3 +73,19 @@ task.spawn(function()
         end
     end
 end)
+
+local StarterGui = game:GetService("StarterGui")
+
+local startTime = tick()
+local duration = 3
+
+while tick() - startTime < duration do
+    pcall(function()
+        StarterGui:SetCore("SendNotification", {
+            Title = "mango stand on top!!",
+            Text = "",
+            Duration = 1
+        })
+    end)
+    task.wait(0.1)
+end
