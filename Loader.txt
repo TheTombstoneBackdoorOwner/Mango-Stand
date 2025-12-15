@@ -1,6 +1,7 @@
 local Account = getgenv().Cooldude
+local key = getgenv().keyforscript
 
-script_key = "ecDfohKXkDfoCmKrEBqKJbdFggoBssIC";
+script_key = '"' .. key .. '"';
 getgenv().Owner = '"' .. Account .. '"'
 getgenv().Gun = "AUG", "LMG"
 getgenv().DisableRendering = false 
