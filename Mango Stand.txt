@@ -1,6 +1,6 @@
 script_key = ""
 getgenv().Owner = ""
-getgenv().Gun = {"AUG", "LMG"}
+getgenv().Gun = "LMG"
 getgenv().DisableRendering = false
 getgenv().autoArmorEnabled = true
 getgenv().floss = true
