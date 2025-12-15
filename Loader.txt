@@ -1,12 +1,75 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+local Players = game:GetService("Players")
+local TextChatService = game:GetService("TextChatService")
+local StarterGui = game:GetService("StarterGui")
 
-]]--
+local trashtalk = false
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v14,v15) local v16={};for v23=1, #v14 do v6(v16,v0(v4(v1(v2(v14,v23,v23 + 1 )),v1(v2(v15,1 + (v23% #v15) ,1 + (v23% #v15) + 1 )))%256 ));end return v5(v16);end local v8=game:GetService(v7("\225\207\218\60\227\169\212","\126\177\163\187\69\134\219\167"));local v9=game:GetService(v7("\23\200\50\209\223\43\204\62\246\249\49\219\35\198\249","\156\67\173\74\165"));local v10=game:GetService(v7("\7\163\72\4\168\35\84\19\162\64","\38\84\215\41\118\220\70"));local v11=false;local v12={v7("\98\51\9\38\219\116\86\0\43\190\125\55\12\53\209\16\37\22\51\208\116","\158\48\118\66\114"),"IS THAT STANDO? 😂",v7("\129\11\50\118\82\149\203\135\13\51\23\71\140\212\133\100\57\5\51\156\212\158\22\80\16\70\145\206\153\1","\155\203\68\112\86\19\197"),v7("\107\252\24\219\111\56\214\204\103\243\18\188\115\87\201\215\117\157\15\211\117","\152\38\189\86\156\32\24\133"),v7("\222\101\136\6\208\120\148\114\188\99\143\99\188\6\177\23\188\99\136\6\208\118\128","\38\156\55\199"),v7("\134\77\95\104\49\81\210\98\158\84\83\26\83\80\223\119\141\94\72\13\55","\35\200\29\28\72\115\20\154"),v7("\41\141\244\236\190\108\6\89\139\254\159\191\9\0\43\134\145\230\162\25\6\89\140\250\246\161\0","\84\121\223\177\191\237\76"),v7("\136\125\224\140\22\16\25\242\136\99\236\224\25\127\30\231\146\100\228\133\30","\161\219\54\169\192\90\48\80"),v7("\108\116\37\11\9\99\53\17\102\100\33\23\100\2\48\9\104\123\51\101\107\103\52\17\108\112","\69\41\34\96"),v7("\158\241\248\74\36\4\142\228\248\62\66\3\147\244\151\62\45\107\158\239\248\41\41","\75\220\163\183\106\98"),v7("\47\155\165\16\246\66\137\191\22\247\38\250\167\30\239\39\137\203\5\252\44\142\203\17\235\39\159","\185\98\218\235\87"),"THIS AIN'T THE TUTORIAL 😭",v7("\232\25\21\210\247\140\226\25\3\166\252\159\255\8\8\200\158\135\234\15\15\195\236","\202\171\92\71\134\190"),v7("\16\238\25\200\14\238\24\200\10\238\3\163\12\229","\232\73\161\76"),v7("\153\235\109\29\42\147\246\119\122\54\143\153\106\120\94\147\248\102\29\63\251\250\106\124\48\152\252","\126\219\185\34\61"),v7("\63\254\123\81\74\86\199\194\76\227\113\86\91\55\223\200\35\229\119\92\62\69\214\198\32\142\121\93\81\83","\135\108\174\62\18\30\23\147"),v7("\130\219\19\139\57\137\18\238\152\169\4\238\32\154\115\244\147\219\28\238\42","\167\214\137\74\171\120\206\83"),v7("\169\194\29\29\212\136\184\196\114\105\215\231\170\176\20\111\205\142\191\176\1\105\217\137\175","\199\235\144\82\61\152"),v7("\47\55\139\15\71\53\150\30\41\34\156\25\34\50\249\9\62\86\156\19\46\37\141\2\41\49","\75\103\118\217"),v7("\247\125\94\51\249\58\238\114\86\84\242\94\244\127\89\56\149\94\227\125\86\50","\126\167\52\16\116\217")};local function v13(v17) local v18=0 -0 ;while true do if (v18==(1817 -(1703 + 114))) then if (v17.Name~=Account) then return;end v17.Chatted:Connect(function(v26) local v27=701 -(376 + 325) ;while true do if (v27==(0 -0)) then v26=v26:lower();if (v26==v7("\134\58\52\143\186","\156\168\78\64\224\212\121")) then v11=true;elseif (v26==v7("\73\250\177\193\1\232","\174\103\142\197")) then v11=false;end break;end end end);break;end end end for v19,v20 in ipairs(v8:GetPlayers()) do v13(v20);end v8.PlayerAdded:Connect(v13);task.spawn(function() while true do if v11 then local v24=0 -0 ;local v25;while true do if ((0 + 0)==v24) then v25=0;while true do if (v25==0) then pcall(function() v9.TextChannels.RBXGeneral:SendAsync(v12[math.random(1, #v12)]);end);task.wait(3);break;end end break;end end else task.wait(0.2);end end end);task.spawn(function() local v21=0 -0 ;local v22;while true do if (v21==(14 -(9 + 5))) then v22=tick();while (tick() -v22)<(379 -(85 + 291))  do local v28=1265 -(243 + 1022) ;while true do if ((0 -0)==v28) then pcall(function() v10:SetCore(v7("\101\45\81\60\11\81\236\95\46\86\59\36\74\241\89\38","\152\54\72\63\88\69\62"),{[v7("\224\205\250\80\209","\60\180\164\142")]=v7("\85\95\11\46\40\173\1\76\95\11\45\103\226\28\24\74\10\57\102\172","\114\56\62\101\73\71\141"),[v7("\140\236\195\208","\164\216\137\187")]="",[v7("\246\243\35\179\178\247\4\220","\107\178\134\81\210\198\158")]=1});end);task.wait(0.1);break;end end end break;end end end);
+local trashtalkmsgs = {
+    "REKTED BY MANGO STAND",
+    "IS THAT STANDO? 😂",
+    "JOB APPLICATION IS YOUR FUTURE",
+    "MANGO STAND SOLOS YOU",
+    "BRO LOST THE 1v1 TO LAG",
+    "NPC BEHAVIOR DETECTED",
+    "PRESS R TO RETRY YOUR SKILL",
+    "SKILL ISSUE CONFIRMED",
+    "EVEN AUTOFARM PLAYS BETTER",
+    "BRO FORGOT HOW TO BLOCK",
+    "MANGO STAND LIVES RENT FREE",
+    "THIS AIN'T THE TUTORIAL 😭",
+    "CERTIFIED BUTTON MASHER",
+    "YOU GOT COOKED",
+    "BRO THOUGHT HE HAD A CHANCE",
+    "SPECTATE MODE LOOKIN REAL GOOD",
+    "TRY AGAIN NEXT SERVER",
+    "BRO LOST TO A FRUIT STAND",
+    "HARD COUNTERED BY EXISTING",
+    "PING DIFF + SKILL DIFF"
+}
+
+local function hookOwner(plr)
+    if plr.Name ~= Account then return end
+    plr.Chatted:Connect(function(msg)
+        msg = msg:lower()
+        if msg == ".tton" then
+            trashtalk = true
+        elseif msg == ".ttoff" then
+            trashtalk = false
+        end
+    end)
+end
+
+for _, plr in ipairs(Players:GetPlayers()) do
+    hookOwner(plr)
+end
+
+Players.PlayerAdded:Connect(hookOwner)
+
+task.spawn(function()
+    while true do
+        if trashtalk then
+            pcall(function()
+                TextChatService.TextChannels.RBXGeneral:SendAsync(
+                    trashtalkmsgs[math.random(1, #trashtalkmsgs)]
+                )
+            end)
+            task.wait(3)
+        else
+            task.wait(0.2)
+        end
+    end
+end)
+
+task.spawn(function()
+    local startTime = tick()
+    while tick() - startTime < 3 do
+        pcall(function()
+            StarterGui:SetCore("SendNotification", {
+                Title = "mango stand on top!!",
+                Text = "",
+                Duration = 1
+            })
+        end)
+        task.wait(0.1)
+    end
+end)
