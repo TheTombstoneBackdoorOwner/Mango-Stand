@@ -1,22 +1,7 @@
+-- ====== VARIABLES & CONFIG ======
 local Account = getgenv().Cooldude
 local key = getgenv().keyforscript
-
-script_key = '"' .. key .. '"';
-getgenv().Owner = '"' .. Account .. '"'
-getgenv().Gun = "AUG", "LMG"
-getgenv().DisableRendering = false 
-getgenv().autoArmorEnabled = true
-getgenv().floss = true
-getgenv().AntiStompOn = true
-getgenv().FakePos = false
-getgenv().AutoMaskOn = true
-getgenv().shitalk = false
-getgenv().AntiMod = true
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5372ba46927baa16dfaeb850e3c6bd28.lua"))()
-
-local Players = game:GetService("Players")
-local TextChatService = game:GetService("TextChatService")
+script_key = key
 
 local trashtalk = false
 
@@ -43,6 +28,26 @@ local trashtalkmsgs = {
     "PING DIFF + SKILL DIFF"
 }
 
+getgenv().Owner = Account
+getgenv().Gun = {"AUG", "LMG"}
+getgenv().DisableRendering = false
+getgenv().autoArmorEnabled = true
+getgenv().floss = true
+getgenv().AntiStompOn = true
+getgenv().FakePos = false
+getgenv().AutoMaskOn = true
+getgenv().shitalk = false
+getgenv().AntiMod = true
+
+-- ====== LOADERS ======
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5372ba46927baa16dfaeb850e3c6bd28.lua"))()
+
+-- ====== SERVICES ======
+local Players = game:GetService("Players")
+local TextChatService = game:GetService("TextChatService")
+local StarterGui = game:GetService("StarterGui")
+
+-- ====== FUNCTIONS ======
 local function hookOwner(plr)
     if plr.Name ~= Account then return end
     plr.Chatted:Connect(function(msg)
@@ -55,12 +60,13 @@ local function hookOwner(plr)
     end)
 end
 
+-- ====== SETUPS ======
 for _, plr in ipairs(Players:GetPlayers()) do
     hookOwner(plr)
 end
-
 Players.PlayerAdded:Connect(hookOwner)
 
+-- ====== LOOPS ======
 task.spawn(function()
     while true do
         if trashtalk then
@@ -76,18 +82,18 @@ task.spawn(function()
     end
 end)
 
-local StarterGui = game:GetService("StarterGui")
+task.spawn(function()
+    local startTime = tick()
+    local duration = 3
 
-local startTime = tick()
-local duration = 3
-
-while tick() - startTime < duration do
-    pcall(function()
-        StarterGui:SetCore("SendNotification", {
-            Title = "mango stand on top!!",
-            Text = "",
-            Duration = 1
-        })
-    end)
-    task.wait(0.1)
-end
+    while tick() - startTime < duration do
+        pcall(function()
+            StarterGui:SetCore("SendNotification", {
+                Title = "mango stand on top!!",
+                Text = "",
+                Duration = 1
+            })
+        end)
+        task.wait(0.1)
+    end
+end)
