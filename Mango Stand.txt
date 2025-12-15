@@ -1,3 +1,13 @@
-getgenv().Cooldude = ""
+getgenv().Owner = ""
+getgenv().Gun = {"AUG", "LMG"}
+getgenv().DisableRendering = false
+getgenv().autoArmorEnabled = true
+getgenv().floss = true
+getgenv().AntiStompOn = true
+getgenv().FakePos = false
+getgenv().AutoMaskOn = true
+getgenv().shitalk = false -- do not change this
+getgenv().AntiMod = true
 
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5372ba46927baa16dfaeb850e3c6bd28.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheTombstoneBackdoorOwner/Mango-Stand/refs/heads/main/Loader.txt"))()
