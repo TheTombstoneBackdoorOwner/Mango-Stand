@@ -1,13 +1,75 @@
 local Account = getgenv().Cooldude
 
 getgenv().Owner = '"' .. Account .. '"'
-getgenv().Gun = "AUG"
+getgenv().Gun = "AUG", "LMG"
 getgenv().DisableRendering = false 
 getgenv().autoArmorEnabled = true
 getgenv().floss = true
 getgenv().AntiStompOn = true
 getgenv().FakePos = false
 getgenv().AutoMaskOn = true
-getgenv().shitalk = true
+getgenv().shitalk = false
 getgenv().AntiMod = true
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5372ba46927baa16dfaeb850e3c6bd28.lua"))()
+
+local Players = game:GetService("Players")
+local TextChatService = game:GetService("TextChatService")
+
+local trashtalk = false
+
+local trashtalkmsgs = {
+    "REKTED BY MANGO STAND",
+    "IS THAT STANDO? 😂",
+    "JOB APPLICATION IS YOUR FUTURE",
+    "MANGO STAND SOLOS YOU",
+    "BRO LOST THE 1v1 TO LAG",
+    "NPC BEHAVIOR DETECTED",
+    "PRESS R TO RETRY YOUR SKILL",
+    "SKILL ISSUE CONFIRMED",
+    "EVEN AUTOFARM PLAYS BETTER",
+    "BRO FORGOT HOW TO BLOCK",
+    "MANGO STAND LIVES RENT FREE",
+    "THIS AIN'T THE TUTORIAL 😭",
+    "CERTIFIED BUTTON MASHER",
+    "YOU GOT COOKED",
+    "BRO THOUGHT HE HAD A CHANCE",
+    "SPECTATE MODE LOOKIN REAL GOOD",
+    "TRY AGAIN NEXT SERVER",
+    "BRO LOST TO A FRUIT STAND",
+    "HARD COUNTERED BY EXISTING",
+    "PING DIFF + SKILL DIFF"
+}
+
+local function hookOwner(plr)
+    if plr.Name ~= Account then return end
+    plr.Chatted:Connect(function(msg)
+        msg = msg:lower()
+        if msg == ".tton" then
+            trashtalk = true
+        elseif msg == ".ttoff" then
+            trashtalk = false
+        end
+    end)
+end
+
+for _, plr in ipairs(Players:GetPlayers()) do
+    hookOwner(plr)
+end
+
+Players.PlayerAdded:Connect(hookOwner)
+
+task.spawn(function()
+    while true do
+        if trashtalk then
+            pcall(function()
+                TextChatService.TextChannels.RBXGeneral:SendAsync(
+                    trashtalkmsgs[math.random(1, #trashtalkmsgs)]
+                )
+            end)
+            task.wait(3)
+        else
+            task.wait(0.2)
+        end
+    end
+end)
