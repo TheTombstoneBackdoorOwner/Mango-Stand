@@ -1,8 +1,5 @@
 -- ====== VARIABLES & CONFIG ======
 local Account = getgenv().Cooldude
-local key = getgenv().keyforscript
-script_key = key
-
 local trashtalk = false
 
 local trashtalkmsgs = {
@@ -38,6 +35,13 @@ getgenv().FakePos = false
 getgenv().AutoMaskOn = true
 getgenv().shitalk = false
 getgenv().AntiMod = true
+
+-- ====== WAIT FOR KEY ======
+while not getgenv().keyforscript do
+    warn("Waiting for getgenv().keyforscript to be set...")
+    task.wait(0.5)
+end
+script_key = getgenv().keyforscript
 
 -- ====== LOADERS ======
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5372ba46927baa16dfaeb850e3c6bd28.lua"))()
