@@ -1,31 +1,5 @@
--- ====== VARIABLES & CONFIG ======
 local Account = getgenv().Cooldude
-local trashtalk = false
-
-local trashtalkmsgs = {
-    "REKTED BY MANGO STAND",
-    "IS THAT STANDO? 😂",
-    "JOB APPLICATION IS YOUR FUTURE",
-    "MANGO STAND SOLOS YOU",
-    "BRO LOST THE 1v1 TO LAG",
-    "NPC BEHAVIOR DETECTED",
-    "PRESS R TO RETRY YOUR SKILL",
-    "SKILL ISSUE CONFIRMED",
-    "EVEN AUTOFARM PLAYS BETTER",
-    "BRO FORGOT HOW TO BLOCK",
-    "MANGO STAND LIVES RENT FREE",
-    "THIS AIN'T THE TUTORIAL 😭",
-    "CERTIFIED BUTTON MASHER",
-    "YOU GOT COOKED",
-    "BRO THOUGHT HE HAD A CHANCE",
-    "SPECTATE MODE LOOKIN REAL GOOD",
-    "TRY AGAIN NEXT SERVER",
-    "BRO LOST TO A FRUIT STAND",
-    "HARD COUNTERED BY EXISTING",
-    "PING DIFF + SKILL DIFF"
-}
-
-getgenv().Owner = Account
+getgenv().Owner = '"' .. Account .. '"'
 getgenv().Gun = {"AUG", "LMG"}
 getgenv().DisableRendering = false
 getgenv().autoArmorEnabled = true
@@ -36,68 +10,4 @@ getgenv().AutoMaskOn = true
 getgenv().shitalk = false
 getgenv().AntiMod = true
 
--- ====== WAIT FOR KEY ======
-while not getgenv().keyforscript do
-    warn("Waiting for getgenv().keyforscript to be set...")
-    task.wait(0.5)
-end
-script_key = getgenv().keyforscript
-
--- ====== LOADERS ======
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5372ba46927baa16dfaeb850e3c6bd28.lua"))()
-
--- ====== SERVICES ======
-local Players = game:GetService("Players")
-local TextChatService = game:GetService("TextChatService")
-local StarterGui = game:GetService("StarterGui")
-
--- ====== FUNCTIONS ======
-local function hookOwner(plr)
-    if plr.Name ~= Account then return end
-    plr.Chatted:Connect(function(msg)
-        msg = msg:lower()
-        if msg == ".tton" then
-            trashtalk = true
-        elseif msg == ".ttoff" then
-            trashtalk = false
-        end
-    end)
-end
-
--- ====== SETUPS ======
-for _, plr in ipairs(Players:GetPlayers()) do
-    hookOwner(plr)
-end
-Players.PlayerAdded:Connect(hookOwner)
-
--- ====== LOOPS ======
-task.spawn(function()
-    while true do
-        if trashtalk then
-            pcall(function()
-                TextChatService.TextChannels.RBXGeneral:SendAsync(
-                    trashtalkmsgs[math.random(1, #trashtalkmsgs)]
-                )
-            end)
-            task.wait(3)
-        else
-            task.wait(0.2)
-        end
-    end
-end)
-
-task.spawn(function()
-    local startTime = tick()
-    local duration = 3
-
-    while tick() - startTime < duration do
-        pcall(function()
-            StarterGui:SetCore("SendNotification", {
-                Title = "mango stand on top!!",
-                Text = "",
-                Duration = 1
-            })
-        end)
-        task.wait(0.1)
-    end
-end)
